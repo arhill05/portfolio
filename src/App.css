@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt');
+body {
+  background-color: #f8f4fd;
+  color: #2e2e2e;
+  font-family: 'Open Sans', sans-serif;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.App-intro {
+  font-size: large;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header {
+  text-align: center;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 64vh;
+  background: linear-gradient(purple, rgba(128, 0, 128, 0.72));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 18vh);
+  box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+}
+.header p {
+  font-family: 'Rock Salt', cursive;
+  margin-top: 8vh;
+  font-size: 72px;
+  color: #fcfcfc;
+  text-shadow: 5px 3px 4px #401567;
+}
+.shadow {
+  filter: drop-shadow(0 5px 5px rgba(10, 10, 10, 0.4));
+}
+.card {
+  background-color: #fcfcfc;
+  box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+  margin-bottom: 32px;
+}
+.card .card-content {
+  padding: 32px;
+}
+.half-width {
+  width: 50%;
+}
+.centered {
+  margin: 0 auto;
+}
+.content {
+  position: fixed;
+  top: 24vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 32px;
+}
+.about {
+  margin: 0 auto 32px auto;
+  width: 60%;
+}
+.about .card-content {
+  width: fit-content;
+}
+.about p {
+  margin-top: 0;
+  padding-left: 3px;
+}
+.about h1,
+.about h3 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+.about h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+@media screen and (max-width: 1223px) {
+  .about {
+    width: 90%;
+  }
+  .about p {
+    text-align: center;
+  }
+  .header p {
+    margin-top: 3vh;
+  }
+}
