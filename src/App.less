@@ -1,4 +1,5 @@
 @base-font-color: #2e2e2e;
+@base-font-size: 16px;
 @white: #fcfcfc;
 @purple: purple;
 @light-purple: #8E3ED7;
@@ -10,46 +11,55 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body, p {
+  font-size: @base-font-size;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1 {
+  font-size: @base-font-size * 1.8;
 }
 
-.App-intro {
-  font-size: large;
+h2 {
+  font-size: @base-font-size * 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  font-size: @base-font-size * 1.2;
+}
+
+h1,h2,h3 {
+  color: @purple;
+}
+
+button {
+  background-color: @purple;
+  color: @white;
+  text-shadow: 5px 3px 4px darken(@light-purple, 30%);
+  border: none;
+  border-right: 2px solid darken(purple, 15%); 
+  border-bottom: 2px solid darken(purple, 15%); 
+  border-radius: 4px;
+  padding: 8px;
 }
 
 .header {
   text-align: center;
   z-index: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 64vh;
+  margin-top: 0;
+  height: 48vh;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 64vh;
   background: linear-gradient(purple, fadeout(purple, 28%));
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 18vh);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 22vh);
   box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2),
     0 0 0 1px rgba(10, 10, 10, 0.2);
   p {
+    margin-top: 0;
+    padding: 40px;
     font-family: 'Rock Salt', cursive;
-    margin-top: 8vh;
     font-size: 72px;
     color: @white;
     text-shadow: 5px 3px 4px darken(@light-purple, 30%);
@@ -79,11 +89,14 @@ body {
 }
 
 .content {
-  position: fixed;
-  top: 24vh;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  top: 26vh;
+  // position: fixed;
+  // top: 24vh;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // overflow-y: scroll;
   z-index: 1000;
   padding: 32px;
 }
@@ -91,15 +104,20 @@ body {
 .about {
   margin: 0 auto 32px auto;
   width: 60%;
-  .card-content {
+  text-align: center;
+  .tagline {
     width: fit-content;
+    margin-bottom: 64px;
+    text-align: left;
   }
-  p {
+  .subtitle {
     margin-top: 0;
     padding-left: 3px; // align with header;
   }
   h1,
+  h2,
   h3 {
+    text-align: left;
     margin: 0;
     margin-bottom: 8px;
   }
@@ -107,18 +125,24 @@ body {
     text-align: center;
     font-size: 3.5rem;
   }
+  p {
+    text-align: left;
+  }
+  .call-to-action {
+    margin: 32px;
+    font-size: @base-font-size * 1.8;
+    padding: 16px;
+  }
 }
 
 @media screen and (max-width: 1223px) {
-  .about {
-    width: 90%;
-    p {
-      text-align: center;
-    }
+  .hidden-on-mobile {
+    display: auto;
   }
-  .header {
-    p {
-      margin-top: 3vh;
+  .about {
+    width: 100%;
+    .subtitle {
+      text-align: center;
     }
   }
 }
