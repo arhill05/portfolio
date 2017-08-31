@@ -22,7 +22,7 @@ h2,
 h3 {
   color: purple;
 }
-button {
+button.primary {
   background-color: purple;
   color: #fcfcfc;
   text-shadow: 5px 3px 4px #401567;
@@ -104,6 +104,67 @@ button {
   margin: 32px;
   font-size: 28.8px;
   padding: 16px;
+}
+.portfolio {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "piece-1 piece-2" "piece-3 piece-4";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+.portfolio .portfolio-item {
+  background-color: #fcfcfc;
+  box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+.portfolio .portfolio-item .card-content {
+  padding: 32px;
+}
+.portfolio .portfolio-item.item-1 {
+  grid-area: piece-1;
+}
+.portfolio .portfolio-item.item-2 {
+  grid-area: piece-2;
+}
+.portfolio .portfolio-item.item-3 {
+  grid-area: piece-3;
+}
+.portfolio .portfolio-item.item-4 {
+  grid-area: piece-4;
+}
+.portfolio .portfolio-item .portfolio-heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.portfolio .portfolio-item .portfolio-heading h2 {
+  margin-top: 0;
+}
+.portfolio .portfolio-item .portfolio-heading .action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.portfolio .portfolio-item .portfolio-heading .action-buttons button {
+  font-size: 14px;
+  border: none;
+  background: none;
+  margin-left: 8px;
+}
+.portfolio .portfolio-item .portfolio-heading .action-buttons button i {
+  font-size: 20px;
+}
+.portfolio .portfolio-item .portfolio-heading .action-buttons button span {
+  font-size: 12px;
+}
+.portfolio .portfolio-item .portfolio-heading .action-buttons button .icon {
+  display: block;
 }
 @media screen and (max-width: 1223px) {
   .hidden-on-mobile {

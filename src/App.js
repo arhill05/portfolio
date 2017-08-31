@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import "./bootstrap.min.css";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "./App.css";
 
 
@@ -24,21 +25,23 @@ class App extends Component {
                 I have a passion for building websites that not only look nice, but serve a purpose.
                 I want to solve a problem with the work I do. </p>
               </div>
-              <button className="call-to-action">Get In Touch</button>
+              <button className="call-to-action primary">Get In Touch</button>
             </div>
           </div>
-          <div className="row">
-            <div className="col-xs-12 col-md-6">
-              <div className="card centered">
-                <div className="card-content">test</div>
-              </div>
-            </div>
-            <div className="col-xs-12 col-md-6">
-              <div className="card centered">
-                <div className="card-content">test</div>
+        <div className="portfolio">
+          <div className="portfolio-item item-1">
+            <div className="portfolio-heading">
+              <h2>Socrates</h2>
+              <div className="action-buttons">
+                <button><i className="fa fa-github icon" aria-hidden="true"></i>GitHub</button>
+                <button><span className="icon">www</span>Live Site</button>
               </div>
             </div>
           </div>
+          <div className="portfolio-item item-2"></div>
+          <div className="portfolio-item item-3"></div>
+          <div className="portfolio-item item-4"></div>
+        </div>
         </div>
       </div>
     );
