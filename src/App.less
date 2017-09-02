@@ -31,6 +31,7 @@ h1,
 h2,
 h3 {
     color: @purple;
+    text-shadow: 1px 0px 0px darken(@light-purple, 30%);
 }
 
 button {
@@ -65,13 +66,17 @@ button {
 
 .header {
     .section-heading;
+    p {
+        padding: 40px;
+    }
 }
 
 .portfolio-section-heading {
     .section-heading;
     z-index: 0; // top-left x y, top-right x,y, bottom-right x,y, bottom-left x,y
-    clip-path: polygon(0 0, 100% 55%, 100% 85%, 0 30%);
+    clip-path: polygon(0 0, 100% 55%, 100% 95%, 0 40%);
     position: relative;
+    width: 100%;
     top: -15vh;
     p {
       font-size: 48px;
@@ -80,7 +85,11 @@ button {
 }
 
 .shadow {
-    filter: drop-shadow(0 5px 5px rgba(10, 10, 10, 0.4));
+    filter: drop-shadow(0 3px 5px rgba(10, 10, 10, 0.4));
+}
+
+.section-heading-shadow {
+    filter: drop-shadow(0 0px 5px rgba(10, 10, 10, 0.8));
 }
 
 .card {
@@ -90,6 +99,16 @@ button {
         padding: 32px;
     }
     margin-bottom: 32px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid @base-font-color;
+    border-left: 4px solid @purple;
+    border-radius: 4px;
+    background-color: lighten(@light-purple, 40%);
+    padding: 4px 8px;
+    margin: 0 8px;
 }
 
 .half-width {
@@ -104,6 +123,7 @@ button {
     position: absolute;
     top: 26vh;
     z-index: 1000;
+    width: 100%;
 }
 
 .container {
@@ -148,7 +168,9 @@ button {
 }
 
 .portfolio {
-    width: 80%;
+    position: relative;
+    top: -20vh;
+    width: 90%;
     margin: 0 auto;
     display: grid;
     grid-template-areas: "piece-1 piece-2" "piece-3 piece-4";
@@ -161,6 +183,12 @@ button {
         width: 100%;
         height: 100%;
         padding: 16px;
+        img {
+            margin-bottom: 32px;
+            max-width: 100%;
+            max-height: 100%;
+            box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+        }
         &.item-1 {
             grid-area: piece-1;
         }
@@ -185,10 +213,12 @@ button {
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;
-                button {
+                a {
                     font-size: 14px;
                     border: none;
                     background: none;
+                    text-align: center;
+                    color: @purple;
                     i {
                         font-size: 20px;
                     }
@@ -205,6 +235,13 @@ button {
     }
 }
 
+@media screen and (max-width: 1223px) and (orientation: landscape) {
+    .header p {
+        padding: 8px;
+        font-size: 60px;
+    }
+}
+
 @media screen and (max-width: 1223px) {
     .hidden-on-mobile {
         display: auto;
@@ -214,5 +251,16 @@ button {
         .subtitle {
             text-align: center;
         }
+    }
+    .portfolio-section-heading p {
+        padding-top: 20vh;
+        font-size: 24px;
+    }
+
+    .portfolio {
+        width: 100%;
+        grid-template-areas: "piece-1" "piece-2" "piece-3" "piece-4";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 }

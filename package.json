@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "http://dev.andrewhill.io/portfolio",
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
