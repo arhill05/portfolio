@@ -32,6 +32,22 @@ button.primary {
   border-radius: 4px;
   padding: 8px;
 }
+.section-heading {
+  text-align: center;
+  z-index: 0;
+  margin-top: 0;
+  height: 48vh;
+  background: linear-gradient(purple, rgba(128, 0, 128, 0.72));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 22vh);
+  box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+}
+.section-heading p {
+  margin-top: 0;
+  font-family: 'Rock Salt', cursive;
+  font-size: 72px;
+  color: #fcfcfc;
+  text-shadow: 5px 3px 4px #401567;
+}
 .header {
   text-align: center;
   z-index: 0;
@@ -43,11 +59,33 @@ button.primary {
 }
 .header p {
   margin-top: 0;
-  padding: 40px;
   font-family: 'Rock Salt', cursive;
   font-size: 72px;
   color: #fcfcfc;
   text-shadow: 5px 3px 4px #401567;
+}
+.portfolio-section-heading {
+  text-align: center;
+  margin-top: 0;
+  height: 48vh;
+  background: linear-gradient(purple, rgba(128, 0, 128, 0.72));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 22vh);
+  box-shadow: 0px 2px 3px 0px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+  z-index: 0;
+  clip-path: polygon(0 0, 100% 55%, 100% 85%, 0 30%);
+  position: relative;
+  top: -15vh;
+}
+.portfolio-section-heading p {
+  margin-top: 0;
+  font-family: 'Rock Salt', cursive;
+  font-size: 72px;
+  color: #fcfcfc;
+  text-shadow: 5px 3px 4px #401567;
+}
+.portfolio-section-heading p {
+  font-size: 48px;
+  padding: 17vh;
 }
 .shadow {
   filter: drop-shadow(0 5px 5px rgba(10, 10, 10, 0.4));
@@ -70,9 +108,14 @@ button.primary {
   position: absolute;
   top: 26vh;
   z-index: 1000;
+}
+.container {
+  width: 100%;
   padding: 32px;
 }
 .about {
+  position: relative;
+  z-index: 1000;
   margin: 0 auto 32px auto;
   width: 60%;
   text-align: center;
@@ -142,6 +185,7 @@ button.primary {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .portfolio .portfolio-item .portfolio-heading h2 {
   margin-top: 0;
@@ -149,7 +193,7 @@ button.primary {
 .portfolio .portfolio-item .portfolio-heading .action-buttons {
   display: flex;
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-end;
 }
 .portfolio .portfolio-item .portfolio-heading .action-buttons button {
   font-size: 14px;
